@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+    color: #2a211b;
+    background-color: #f6f1e9;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: #bd5d38;
+    color: #fdfbf7;
+  }
+  /* Thanh cuộn tinh tế */
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d8cab6;
+    border: 3px solid #f6f1e9;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bd5d38;
+  }
+}
+
+@layer components {
+  .u-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-eyebrow text-clay-600;
+  }
+  .display {
+    @apply font-display font-normal leading-[1.05] tracking-[-0.01em];
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-clay-600 text-paper hover:bg-clay-700 hover:shadow-soft;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-paper hover:bg-black;
+  }
+  .btn-outline {
+    @apply btn border border-ink/25 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink hover:bg-ink/5;
+  }
+  .field {
+    @apply w-full rounded-xl border border-line bg-paper px-4 py-3 text-sm text-ink outline-none transition placeholder:text-ink-muted focus:border-clay-500 focus:ring-2 focus:ring-clay-500/15;
+  }
+  .surface {
+    @apply rounded-3xl border border-line bg-paper;
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-paper px-3 py-1 text-xs font-medium text-ink-soft;
+  }
+}
+
+/* Nội dung HTML từ trình soạn thảo (mô tả sản phẩm) */
+.prose-content {
+  line-height: 1.8;
+  color: #574b41;
+}
+.prose-content h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2a211b;
+  margin: 22px 0 10px;
+}
+.prose-content h3 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2a211b;
+  margin: 18px 0 8px;
+}
+.prose-content p {
+  margin: 0 0 12px;
+}
+.prose-content ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0 0 12px;
+}
+.prose-content img {
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 12px 0;
+}

@@ -1,0 +1,13 @@
+{
+  "name": "furniturestore-dev",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Chạy đồng thời storefront (cổng 3000) và admin (cổng nội bộ 3100, truy cập qua /quan-tri).",
+  "scripts": {
+    "dev": "concurrently -n shop,admin -c magenta,blue \"npm --prefix storefront-web run dev\" \"npm --prefix admin-web run dev\"",
+    "install:all": "npm --prefix storefront-web install && npm --prefix admin-web install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

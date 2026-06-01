@@ -1,0 +1,69 @@
+# ============================================================
+#  FurnitureStore — .gitignore
+#  Bao trùm: .NET (API), Node/Vite (storefront-web, admin-web),
+#  Visual Studio / VS Code và các file môi trường/bí mật.
+# ============================================================
+
+# ----- .NET / ASP.NET Core (FurnitureStore.API) -----
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+artifacts/
+
+# Kết quả test / coverage
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+
+# ----- Node / Vite (storefront-web, admin-web) -----
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+.eslintcache
+.npm/
+.pnpm-store/
+
+# Log của trình quản lý gói
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----- Biến môi trường / bí mật (KHÔNG commit) -----
+.env
+.env.*
+!.env.example
+*.pfx
+appsettings.*.local.json
+secrets.json
+
+# ----- Visual Studio / Rider -----
+.vs/
+.claude/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+.idea/
+
+# ----- Hệ điều hành -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- File upload / media sinh ra lúc chạy -----
+FurnitureStore.API/wwwroot/uploads/
+FurnitureStore.API/wwwroot/media/
+
+# ----- Khác -----
+*.log
